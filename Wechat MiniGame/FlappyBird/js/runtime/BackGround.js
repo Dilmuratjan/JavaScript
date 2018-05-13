@@ -1,4 +1,4 @@
-//背景
+//背景类
 import { Sprite } from "../base/Sprite.js";
 
 export class BackGround extends Sprite {

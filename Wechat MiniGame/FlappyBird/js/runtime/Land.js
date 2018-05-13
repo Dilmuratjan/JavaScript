@@ -1,4 +1,4 @@
-//不断移动的陆地
+//陆地类
 export class Land extends Sprite {
 
 }

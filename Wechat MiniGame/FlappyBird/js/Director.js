@@ -1,4 +1,4 @@
-//导演类，控制游戏的逻辑
+//导演类
 import { DataStore } from "./base/DataStore.js";
 
 export class Director {

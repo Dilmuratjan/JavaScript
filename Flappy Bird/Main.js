@@ -1,4 +1,4 @@
-//初始化整个游戏的精灵，作为游戏开始的入口
+//游戏入口
 import {ResourceLoader} from "./js/base/ResourceLoader.js";
 import {BackGround} from "./js/runtime/BackGround.js";
 import {DataStore} from "./js/base/DataStore.js";

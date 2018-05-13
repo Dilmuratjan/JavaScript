@@ -1,3 +1,4 @@
+//资源
 export const Resources = [
     ['background', 'res/background.png'],
     ['land', 'res/land.png'],
