@@ -26,10 +26,7 @@ export class Main {
 
     init() {
         console.log('Main.init() called...');
-        this.dataStore
-            .put('background',
-            new BackGround(this.ctx,
-                this.dataStore.res.get('background')));
+        this.dataStore.put('background', BackGround);
         Director.getInstance().run();
     }
 }

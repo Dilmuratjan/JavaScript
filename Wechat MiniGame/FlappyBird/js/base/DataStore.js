@@ -15,6 +15,9 @@ export class DataStore {
 
     put(key, value) {
         console.log('DataStore.put() called...');
+        if (typeof value === 'function') {
+            value = new value();
+        }
         this.map.set(key, value);
         return this;
     }
