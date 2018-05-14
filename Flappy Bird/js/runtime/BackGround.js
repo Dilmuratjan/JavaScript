@@ -3,7 +3,7 @@ import {Sprite} from "../base/Sprite.js";
 
 export class BackGround extends Sprite {
     constructor() {
-        console.log('Background.constructor called...');
+        console.log('Background.constructor');
         const image = Sprite.getImage('background');
         super(image,
             0, 0,

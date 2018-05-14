@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>团购——限时抢</title>
+<link rel="stylesheet" href="style.css"  />
+</head>
+
+<body>
+<div class="content3">
+<div class="time" id="time">还剩 <span id="LeftTime"></span></div>
+</div>
+<script>
+function FreshTime()
+{
+        var endtime=new Date("2016/8/20,12:47:12");//结束时间
+        var nowtime = new Date();//当前时间
+        var lefttime=parseInt((endtime.getTime()-nowtime.getTime())/1000); 
+        d=parseInt(lefttime/3600/24);
+        h=parseInt((lefttime/3600)%24);
+        m=parseInt((lefttime/60)%60);
+        s=parseInt(lefttime%60);
+    	//ms=(endtime.getTime()-d*24*3600*1000-h*3600*1000-m*60*1000-s*1000)%100;
+        document.getElementById("LeftTime").innerHTML=d+"天"+h+"小时"+m+"分"+s+"秒";
+        if(lefttime<=0){
+        document.getElementById('time').innerHTML='<span id="LeftTime"></span>';
+        document.getElementById("LeftTime").innerHTML="团购已结束";
+        clearInterval(timer);
+        }
+}
+FreshTime()
+var timer;
+timer=setInterval(FreshTime,1000);
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+	ul, li {
+	    list-style: outside none none;
+	}
+	ul li {
+	    background: blue none repeat scroll 0 0;
+	    border: 5px solid #000;
+	    height: 100px;
+	    margin-bottom: 20px;
+	    opacity: 0.3;
+	    width: 100px;
+	}
+	</style>
+	<script type="text/javascript">
+	window.onload = function () {
+	  var Li1 = document.getElementById('li1');
+	  var Li2 = document.getElementById('li2');
+	  Li1.onmouseover = function () {
+	    startMove(this, 'opacity', 100);
+	  }
+	  Li1.onmouseout = function () {
+	    startMove(this, 'opacity', 30);
+	  }
+	  Li2.onmouseover = function () {
+	    startMove(this, 'width', 400);
+	  }
+	  Li2.onmouseout = function () {
+	    startMove(this, 'width', 100);
+	  }
+	}
+	function startMove(obj, attr, iTarget) {
+	  clearInterval(obj.timer);
+	  obj.timer = setInterval(function () {
+	    var icur = 0;
+	    if (attr == 'opacity') {
+	      icur = Math.round(parseFloat(getStyle(obj, attr)) * 100);
+	    } else {
+	      icur = parseInt(getStyle(obj, attr));
+	    }
+	    var speed = (iTarget - icur) / 20;
+	    speed = speed > 0 ? Math.ceil(speed)  : Math.floor(speed);
+	    if (iTarget == icur) {
+	      		clearInterval(obj.timer);
+	    } 
+	    else {
+		    	if (attr == 'opacity') {
+		        		obj.style.filter = 'alpha(opacity' + icur + speed + ')';
+		        		obj.style.opacity = (icur + speed) / 100;
+		    	} 
+		    	else {
+		        		obj.style[attr] = icur + speed + 'px';
+		    	}
+	    }
+	  }, 30)
+	}
+	function getStyle(obj, attr) { //获取样式
+	  if (obj.currentStyle) {
+	    return obj.currentStyle[attr]; //ie
+	  } else {
+	    return getComputedStyle(obj, false) [attr]; //firefox
+	  }
+	}
+	</script>
+</head>
+<body>
+<ul>
+	<li id="li1"></li>
+	<li id="li2"></li>
+</ul>
+</body>
+</html>

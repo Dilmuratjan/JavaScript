@@ -3,12 +3,12 @@ import {DataStore} from "./base/DataStore.js";
 
 export class Director {
     constructor() {
-        console.log('Director.constructor() called...');
+        console.log('Director.constructor()');
         this.dataStore = DataStore.getInstance();
     }
 
     static getInstance() {
-        console.log('getInstance() called...')
+        console.log('getInstance()');
         if (!Director.instance) {
             Director.instance = new Director();
         }
@@ -16,8 +16,8 @@ export class Director {
     }
 
     run() {
-        console.log('Director.run() called...');
-        const backgroundSprite = this.dataStore.get('background')
+        console.log('Director.run()');
+        const backgroundSprite = this.dataStore.get('background');
         backgroundSprite.draw()
     }
 }

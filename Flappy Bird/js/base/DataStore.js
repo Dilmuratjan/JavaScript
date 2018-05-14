@@ -1,7 +1,7 @@
 //变量缓存器
 export class DataStore {
     static getInstance() {
-        console.log('DataStore.getInstance() called...');
+        console.log('DataStore.getInstance()');
         if (!DataStore.instance) {
             DataStore.instance = new DataStore()
         }
@@ -9,12 +9,12 @@ export class DataStore {
     }
 
     constructor() {
-        console.log('DataStore.constructor() called...');
+        console.log('DataStore.constructor()');
         this.map = new Map();
     }
 
     put(key, value) {
-        console.log('DataStore.put() called...');
+        console.log('DataStore.put()');
         if (typeof value === 'function') {
             value = new value();
         }
@@ -23,12 +23,12 @@ export class DataStore {
     }
 
     get(key) {
-        console.log('DataStore.get() called...');
+        console.log('DataStore.get()');
         return this.map.get(key);
     }
 
     destory() {
-        console.log('DataStore.destory() called...');
+        console.log('DataStore.destory()');
         for (let value of this.map.values()) {
             value = null;
         }

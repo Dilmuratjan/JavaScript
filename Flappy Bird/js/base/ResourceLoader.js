@@ -3,7 +3,7 @@ import {Resources} from "./Resources.js";
 
 export class ResourceLoader {
     constructor() {
-        console.log('ResourceLoader.constructor() called...');
+        console.log('ResourceLoader.constructor()');
         this.map = new Map(Resources);
         //console.log(this.map);
         for (let [key, value] of this.map) {
@@ -17,7 +17,7 @@ export class ResourceLoader {
     }
 
     onLoaded(callback) {
-        console.log('ResourceLoader.onLoad() called...');
+        console.log('ResourceLoader.onLoad()');
         let loadedCount = 0;
         for (let value of this.map.values()) {
             value.onload = () => {
@@ -32,7 +32,7 @@ export class ResourceLoader {
     }
 
     static create() {
-        console.log('ResourceLoader.create() called...');
+        console.log('ResourceLoader.create()');
         return new ResourceLoader();
     }
 }

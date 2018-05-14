@@ -8,7 +8,7 @@ export class Sprite {
                 srcW = 0, srcH = 0,
                 x = 0, y = 0,
                 width = 0, height = 0,) {
-        console.log('Sprite.constructor() called...');
+        console.log('Sprite.constructor()');
         this.dataStore = DataStore.getInstance();
         this.ctx = this.dataStore.ctx;
         this.img = img;
@@ -48,7 +48,7 @@ export class Sprite {
          y = this.y,
          width = this.width,
          height = this.height,) {
-        console.log('Sprite.draw() called...');
+        console.log('Sprite.draw()');
         this.ctx.drawImage(
             img,
             srcX,
