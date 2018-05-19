@@ -5,6 +5,7 @@ export class Director {
     constructor() {
         console.log('Director.constructor()');
         this.dataStore = DataStore.getInstance();
+        this.movespeed = 2;
     }
 
     static getInstance() {
@@ -17,7 +18,8 @@ export class Director {
 
     run() {
         console.log('Director.run()');
-        const backgroundSprite = this.dataStore.get('background');
-        backgroundSprite.draw()
+        this.dataStore.get('background').draw();
+        this.dataStore.get('land').draw();
+        requestAnimationFrame(()=>this.run());
     }
 }

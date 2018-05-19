@@ -17,7 +17,8 @@ export class Director {
 
     run() {
         console.log('Director.run() called...');
-        const backgroundSprite = this.dataStore.get('background')
-        backgroundSprite.draw()
+        this.dataStore.get('background').draw();
+        this.dataStore.get('land').draw();
+        requestAnimationFrame(()=>this.run);
     }
 }
