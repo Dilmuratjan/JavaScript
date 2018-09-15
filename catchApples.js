@@ -71,7 +71,7 @@ window.start = function(){
 window.quit = function(){
   clearTimeout(timer);
   console.clear();
-  console.log("%c游戏结束","font-size:16px;")
+  console.log("%cGAME OVER","font-size:16px;")
 }
 
 var begin = function(){
