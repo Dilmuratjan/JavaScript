@@ -1,0 +1,178 @@
+﻿.loginPanel {
+                background: #f6f6f6 none repeat scroll 0 0;
+                border: 1px solid #ccc;
+                border-radius: 15px;
+                box-shadow: 0 0px 25px #999999;
+                height: 270px;
+                width: 390px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -135px;
+                margin-left: -195px;
+            }
+
+
+    .login_logo {
+                    background: rgba(0, 0, 0, 0) url("../images/login_window_logo.png") no-repeat scroll -210px 0;
+                    cursor: move;
+                    height: 44px;
+                    width: 200px;
+                    margin-left: 100px;
+                    margin-top: 20px;
+                    margin-bottom: 45px;
+                    border-bottom: 1px solid #e5e5e5;
+                }
+
+    .inputs {
+                font: bold 17px "Comic Sans MS";
+                margin-left: 60px;
+                width: 100px;
+            }
+
+        .account{
+                    border: 1px solid #ccc;
+                    color: #868686;
+                    font-size: 16px;
+                    padding: 2px;
+                    width: 170px;
+                    margin-left: 9px;
+                    margin-bottom: 5px;
+                }
+
+        .password{
+                    border: 1px solid #ccc;
+                    color: #868686;
+                    font-size: 16px;
+                    padding: 2px;
+                    width: 170px;
+                    margin-bottom: 5px;
+                }
+
+    .button {
+                    background: rgba(0, 0, 0, 0) url("../images/login_btn.png") no-repeat scroll -111px 0;
+                    cursor: pointer;
+                    height: 35px;
+                    width: 111px;
+                    margin-top: 35px;
+                    margin-right: 35px;
+                    margin-left: 77px;
+                }
+
+    .login-state-trigger {
+                            cursor: pointer;
+                            display: block;
+                            float: left;
+                            height: 16px;
+                            overflow: hidden;
+                            width: 120px;
+                            margin-top: 45px;
+                        }
+
+    .login-state-down {
+                        background: transparent url("../images/ptlogin.png") no-repeat scroll 0 -22px;
+                        float: left;
+                        height: 5px;
+                        margin-top: 5px;
+                        overflow: hidden;
+                        text-indent: -999em;
+                        width: 7px;
+                    }
+
+    .login-state-show {
+                        float: left;
+                        height: 15px;
+                        margin: 0px 5px 0 0;
+                        overflow: hidden;
+                        text-indent: -999em;
+                        width: 15px;
+                    }
+
+    .login-state-txt {
+                        float: left;
+                        margin-left: 5px;
+                        font-size: 12px;
+                        line-height:15px!important;
+                    }
+
+        .callme {
+                    background: url("../images/ptlogin.png") -72px 0 no-repeat;
+                }
+
+        .online {
+                    background: url("../images/ptlogin.png") 0 0 no-repeat;
+                }
+
+        .away {
+                    background: url("../images/ptlogin.png") -18px 0 no-repeat;
+                }
+
+        .busy {
+                    background: url("../images/ptlogin.png") -36px 0 no-repeat;
+                }
+
+        .silent {
+                    background: url("../images/ptlogin.png") -108px 0 no-repeat;
+                }
+
+        .hidden {
+                    background: url("../images/ptlogin.png") -54px 0 no-repeat;
+                }
+
+    .statePanel {
+                    background: white none repeat scroll 0 0;
+                    border-color: #ccc #6a6a6a #666 #cdcdcd;
+                    border-style: solid;
+                    border-width: 1px;
+                    display: none;
+                    font-size: 12px;
+                    height: 132px;
+                    line-height: 1.5;
+                    margin: 0;
+                    overflow: hidden;
+                    padding: 0;
+                    position: absolute;
+                    right: 71px;
+                    top: 235px;
+                    width: 100px;
+                    z-index: 10;
+                }
+
+        .statePanel .statePanel_li {
+                                        display: block;
+                                        float: left;
+                                        margin: 0;
+                                        padding: 3px 0;
+                                        width: 100px;
+                                        height: 16px;
+                                        line-height: 16px;
+                                        overflow: hidden;
+                                        zoom: 1;
+                                        cursor: pointer;
+                                    }
+
+            .stateSelect_icon {
+                                float: left;
+                                margin: 2px 0 0 5px;
+                                width: 14px;
+                                height: 14px;
+                                overflow: hidden;
+                            }
+
+            .stateSelect_text {
+                                margin: 0 0 0 22px;
+                            }
+
+    .statePanelClose{
+                        width:28px;
+                        height:28px;
+                        position:absolute;
+                        top:5px;right:5px;
+                        cursor:pointer;
+                        background:url('../images/boxy_btn.png') no-repeat;z-index:1
+                    }
+
+    .ie6_0 .statePanelClose{
+                                background:0;
+                                filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='boxy_btn.png',sizingMethod='scale')
+                            }
